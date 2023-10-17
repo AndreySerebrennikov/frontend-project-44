@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { greeting, question } from '../src/app.js';
+import { question } from '../src/games/brainEven.js';
+import { greeting } from '../src/index.js';
 
 greeting();
 question();
