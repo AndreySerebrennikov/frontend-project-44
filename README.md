@@ -7,5 +7,8 @@
 ### Test Coverage Badge
 [![Test Coverage](https://api.codeclimate.com/v1/badges/cfac93880e03e1b55c06/test_coverage)](https://codeclimate.com/github/AndreySerebrennikov/frontend-project-44/test_coverage)
 
-### Link to asciinema
+### Link to asciinema brain-even
 [![asciicast](https://asciinema.org/a/Yf9wnGFi5cJjH49ZFdOC13qpy.svg)](https://asciinema.org/a/Yf9wnGFi5cJjH49ZFdOC13qpy)
+
+### Link to asciinema brain-calc
+[![asciicast](https://asciinema.org/a/614904.svg)](https://asciinema.org/a/614904)
