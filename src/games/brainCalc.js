@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import readlineSync from 'readline-sync';
 import { userName } from '../index.js';
 
@@ -32,7 +31,7 @@ const question = () => {
   return (resultExpression === answerUser);
 };
 
-export const questions = () => {
+const questions = () => {
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
     const resultQuestion = question();
@@ -46,3 +45,4 @@ export const questions = () => {
   console.log(`Congratulations, ${userName}!`);
   return '';
 };
+export default questions;
