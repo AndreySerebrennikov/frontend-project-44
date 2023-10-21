@@ -6,7 +6,7 @@ let answerUser;
 
 const progression = () => {
   const arrayRandomNumbers = [Math.floor(Math.random() * 100)];
-  const arraySequences = [2, 3, 4, 5];
+  const arraySequences = [2, 5, 3, 7];
   const indexRandomArraySequences = Math.floor(Math.random() * arraySequences.length);
 
   for (let i = 0; i <= 10; i += 1) {
