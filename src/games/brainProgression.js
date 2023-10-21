@@ -6,16 +6,16 @@ let answerUser;
 
 const progression = () => {
   const arrayRandomNumbers = [Math.floor(Math.random() * 100)];
-  const arraySequences = [2, 5, 3, 7];
+  const arraySequences = [2, 5, 3, 7, 4];
   const indexRandomArraySequences = Math.floor(Math.random() * arraySequences.length);
 
-  for (let i = 0; i <= 10; i += 1) {
+  for (let i = 0; i < 9; i += 1) {
     arrayRandomNumbers.push(arrayRandomNumbers[i] + arraySequences[indexRandomArraySequences]);
   }
 
   const indexHiddenNuumber = Math.floor(Math.random() * arrayRandomNumbers.length);
   hiddenNumber = arrayRandomNumbers[indexHiddenNuumber];
-  return arrayRandomNumbers.join().replace(arrayRandomNumbers[indexHiddenNuumber], '..');
+  return arrayRandomNumbers.join(' ').replace(arrayRandomNumbers[indexHiddenNuumber], '..');
 };
 
 const question = () => {
