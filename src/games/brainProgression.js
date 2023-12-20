@@ -1,40 +1,29 @@
-import readlineSync from 'readline-sync';
-import { userName } from '../index.js';
+import { getRandomNum } from '../utils.js';
+import runLogicGame from '../index.js';
 
-let hiddenNumber;
-let answerUser;
+const ruleGame = 'What number is missing in the progression?';
+const maxNumber = 100;
+const minNumber = 1;
 
-const progression = () => {
-  const arrayRandomNumbers = [Math.floor(Math.random() * 100)];
-  const arraySequences = [2, 5, 3, 7, 4];
-  const indexRandomArraySequences = Math.floor(Math.random() * arraySequences.length);
+const getProgression = () => {
+  const progressions = [getRandomNum(maxNumber, minNumber)];
+  const sequences = Math.floor(Math.random() * 10);
 
   for (let i = 0; i < 9; i += 1) {
-    arrayRandomNumbers.push(arrayRandomNumbers[i] + arraySequences[indexRandomArraySequences]);
+    progressions.push(progressions[i] + sequences);
   }
-
-  const indexHiddenNuumber = Math.floor(Math.random() * arrayRandomNumbers.length);
-  hiddenNumber = arrayRandomNumbers[indexHiddenNuumber];
-  return arrayRandomNumbers.join(' ').replace(arrayRandomNumbers[indexHiddenNuumber], '..');
+  return progressions;
 };
 
-const question = () => {
-  answerUser = readlineSync.question(`Question: ${progression()}\nYor answer: `);
-  return (hiddenNumber.toString() === answerUser.toString());
+const getRoundGame = () => {
+  const progressions = getProgression();
+  const indexRandomProgressions = Math.floor(Math.random() * progressions.length);
+  const correctAnswer = progressions[indexRandomProgressions].toString();
+
+  progressions[indexRandomProgressions] = '..';
+  const question = progressions.join(' ');
+  return [question, correctAnswer];
 };
 
-const questions = () => {
-  console.log('What number is missing in the progression?');
-  for (let i = 0; i < 3; i += 1) {
-    const resultQuestion = question();
-    if (resultQuestion) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answerUser} is wrong answer ;(. Correct answer was ${hiddenNumber}.\nLet's try again, ${userName}!`);
-      return '';
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
-  return '';
-};
-export default questions;
+const runBarinProgression = () => runLogicGame(ruleGame, getRoundGame);
+export default runBarinProgression;
