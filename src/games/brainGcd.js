@@ -1,40 +1,28 @@
-import readlineSync from 'readline-sync';
-import { userName } from '../index.js';
+import { getRandomNum } from '../utils.js';
+import runLogicGame from '../index.js';
 
-let resultExpression;
-let answerUser;
+const ruleGame = 'Find the greatest common divisor of given numbers.';
+const maxNumber = 100;
+const minNumber = 1;
 
-const expression = () => {
-  const randomNum1 = Math.floor((Math.random() * 100));
-  const randomNum2 = Math.floor((Math.random() * 100));
-  const minNum = Math.min(randomNum1, randomNum2);
+const getDivisor = (number1, number2) => {
+  const minNum = Math.min(number1, number2);
   let count = 0;
   for (let i = 0; i <= minNum; i += 1) {
-    if (randomNum1 % i === 0 && randomNum2 % i === 0) {
+    if (number1 % i === 0 && number2 % i === 0) {
       count = i;
     }
   }
-  resultExpression = count;
-  return `${randomNum1} ${randomNum2}`;
+  return count;
 };
 
-const question = () => {
-  answerUser = readlineSync.question(`Question: ${expression()}\nYor answer: `);
-  return (resultExpression.toString() === answerUser.toString());
+const getRoundGame = () => {
+  const number1 = getRandomNum(maxNumber, minNumber);
+  const number2 = getRandomNum(maxNumber, minNumber);
+  const question = `${number1} ${number2}`;
+  const correctAnswer = getDivisor(number1, number2).toString();
+  return [question, correctAnswer];
 };
 
-const questions = () => {
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i < 3; i += 1) {
-    const resultQuestion = question();
-    if (resultQuestion) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answerUser} is wrong answer ;(. Correct answer was ${resultExpression}.\nLet's try again, ${userName}!`);
-      return '';
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
-  return '';
-};
-export default questions;
+const runBarinGcd = () => runLogicGame(ruleGame, getRoundGame);
+export default runBarinGcd;
