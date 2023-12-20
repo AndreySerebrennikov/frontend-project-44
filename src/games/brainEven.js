@@ -1,31 +1,17 @@
-/* eslint-disable import/prefer-default-export */
-import readlineSync from 'readline-sync';
-import { userName } from '../index.js';
+import runLogicGame from '../index.js';
+import { getRandomNum } from '../utils.js';
 
-const randomNum = () => Math.floor(Math.random() * 100);
-const chekingNumber = (num) => ((num % 2 === 0) ? 'yes' : 'no');
+const ruleGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const maxNumber = 100;
+const minNumber = 1;
+const isEven = (num) => (num % 2 === 0);
 
-let resultExpression;
-let answerUser;
-
-const question = () => {
-  const num = randomNum();
-  resultExpression = chekingNumber(num);
-  answerUser = readlineSync.question(`Question: ${num}\nYor answer: `);
-  return (resultExpression === answerUser);
+const getRoundGame = () => {
+  const number = getRandomNum(maxNumber, minNumber);
+  const question = number.toString();
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
+  return [question, correctAnswer];
 };
 
-export const questions = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  for (let i = 0; i < 3; i += 1) {
-    const resultQuestion = question();
-    if (resultQuestion) {
-      console.log('Correct!');
-    } else {
-      console.log(`${answerUser} is wrong answer ;(. Correct answer was ${resultExpression}.\nLet's try again, ${userName}!`);
-      return '';
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
-  return '';
-};
+const runBrainEven = () => runLogicGame(ruleGame, getRoundGame);
+export default runBrainEven;
