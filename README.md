@@ -1,42 +1,66 @@
-### Hexlet tests and linter status:
+# Проект "Игры разума":
 [![Actions Status](https://github.com/AndreySerebrennikov/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AndreySerebrennikov/frontend-project-44/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/cfac93880e03e1b55c06/maintainability)](https://codeclimate.com/github/AndreySerebrennikov/frontend-project-44/maintainability)
 
-## Set of five math games
-brain-even - игра: "Проверка на четность"
-brain-calc - игра: "Калькулятор"
-brain-gcd - игра: "Наибольший общий делитель"
-brain-progression - игра: "Арифметическая прогрессия"
-brain-prime - игра: "Простое ли число?"
+## Описание проекта
+"Игры разума": это проект состоящий из 5 игр. Каждая игра задает по 3 вопроса, на которые нужо дать правильные ответы. Если вы ответили на все вопросы, считается что вы прошли игру. В случае неправильного ответа игра завершится.
 
-## Requirements
-you need to install node.js starting from version 13.2.0
+## Требования
+вам необходимо установить node.js начиная с версии 13.2.0
 
-## Install
+### Установка 
 
-### Game Launch Command brain-calc
-```
-brain-calc
-```
-### instal
 ```
 npm i
 ```
-### Maintainability Badge:
-[![Maintainability](https://api.codeclimate.com/v1/badges/cfac93880e03e1b55c06/maintainability)](https://codeclimate.com/github/AndreySerebrennikov/frontend-project-44/maintainability)
+```
+npm link
+```
+## Инструкция по запуску и описание игр:
 
-## Пример размещения asciinema
-
-### Link to asciinema brain-even
+## Игра: "Проверка на четность"
+### Описание игры:
+Пользователю показывается случайное число. И ему нужно ответить 'yes', если число чётное, или 'no' — если нечётное.
+### Запуск игры: "brain-even"
 [![asciicast](https://asciinema.org/a/Yf9wnGFi5cJjH49ZFdOC13qpy.svg)](https://asciinema.org/a/Yf9wnGFi5cJjH49ZFdOC13qpy)
 
-### Link to asciinema brain-calc
+
+## Игра: "Калькулятор"
+### Описание игры:
+Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
+### Запуск игры: 
+```
+brain-calc
+```
+### Пример игры: 
 [![asciicast](https://asciinema.org/a/614904.svg)](https://asciinema.org/a/614904)
 
-### Link to asciinema brain-gcd
+## Игра: "НОД"
+### Описание игры:
+Пользователю показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+### Запуск игры: 
+```
+brain-gcd
+```
+### Пример игры:
 [![asciicast](https://asciinema.org/a/615580.svg)](https://asciinema.org/a/615580)
 
-### Link to asciinema brain-progression
+## Игра: "Арифметическая прогрессия"
+### Описание игры:
+Пользователю показывается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число.
+### Запуск игры: 
+```
+brain-progression
+```
+### Пример игры:
 [![asciicast](https://asciinema.org/a/615582.svg)](https://asciinema.org/a/615582)
 
-### Link to asciinema brain-prime
+## Игра: "Простое ли число?"
+### Описание игры:
+Пользователю показывается случайное число. И ему нужно ответить yes, если число простое, или no — если не простое.
+### Запуск игры: 
+```
+brain-prime
+```
+### Пример игры:
 [![asciicast](https://asciinema.org/a/616284.svg)](https://asciinema.org/a/616284)
