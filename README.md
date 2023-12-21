@@ -21,7 +21,11 @@ npm link
 ## Игра: "Проверка на четность"
 ### Описание игры:
 Пользователю показывается случайное число. И ему нужно ответить 'yes', если число чётное, или 'no' — если нечётное.
-### Запуск игры: "brain-even"
+### Запуск игры: 
+```
+brain-even
+```
+### Пример игры: 
 [![asciicast](https://asciinema.org/a/Yf9wnGFi5cJjH49ZFdOC13qpy.svg)](https://asciinema.org/a/Yf9wnGFi5cJjH49ZFdOC13qpy)
 
 
