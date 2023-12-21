@@ -1,13 +1,13 @@
-import { getRandomNum } from '../utils.js';
+import getRandomNum from '../utils.js';
 import runLogicGame from '../index.js';
 
 const ruleGame = 'What number is missing in the progression?';
-const maxNumber = 100;
-const minNumber = 1;
+const maxNumber = 20;
+const minNumber = 3;
 
 const getProgression = () => {
   const progressions = [getRandomNum(maxNumber, minNumber)];
-  const sequences = Math.floor(Math.random() * 10);
+  const sequences = getRandomNum(maxNumber, minNumber);
 
   for (let i = 0; i < 9; i += 1) {
     progressions.push(progressions[i] + sequences);
@@ -25,5 +25,5 @@ const getRoundGame = () => {
   return [question, correctAnswer];
 };
 
-const runBarinProgression = () => runLogicGame(ruleGame, getRoundGame);
-export default runBarinProgression;
+const runBrainProgression = () => runLogicGame(ruleGame, getRoundGame);
+export default runBrainProgression;
