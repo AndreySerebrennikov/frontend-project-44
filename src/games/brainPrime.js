@@ -19,5 +19,5 @@ const getRoundGame = () => {
   return [question, correctAnswer];
 };
 
-const runBarinPrime = () => runLogicGame(ruleGame, getRoundGame);
-export default runBarinPrime;
+const runBrainPrime = () => runLogicGame(ruleGame, getRoundGame);
+export default runBrainPrime;
