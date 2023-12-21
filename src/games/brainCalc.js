@@ -1,5 +1,5 @@
 import runLogicGame from '../index.js';
-import { getRandomNum } from '../utils.js';
+import getRandomNum from '../utils.js';
 
 const ruleGame = 'What is the result of the expression?';
 const maxNumber = 100;
@@ -34,5 +34,5 @@ const getRoundGame = () => {
   return [question, correctAnswer];
 };
 
-const runBarinCalc = () => runLogicGame(ruleGame, getRoundGame);
-export default runBarinCalc;
+const runBrainCalc = () => runLogicGame(ruleGame, getRoundGame);
+export default runBrainCalc;
