@@ -1,4 +1,4 @@
-import getRandomNum from '../utils.js';
+import { getRandomNum } from '../utils.js';
 import runLogicGame from '../index.js';
 
 const ruleGame = 'What number is missing in the progression?';
