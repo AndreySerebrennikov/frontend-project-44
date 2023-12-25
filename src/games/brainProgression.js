@@ -1,27 +1,26 @@
-import { getRandomNum } from '../utils.js';
+import { getRandomNum, getRandomIndex } from '../utils.js';
 import runLogicGame from '../index.js';
 
 const ruleGame = 'What number is missing in the progression?';
 const maxNumber = 20;
 const minNumber = 3;
 
-const getProgression = () => {
-  const progressions = [getRandomNum(maxNumber, minNumber)];
-  const sequences = getRandomNum(maxNumber, minNumber);
-
-  for (let i = 0; i < 9; i += 1) {
-    progressions.push(progressions[i] + sequences);
+const getProgression = (number, sequences) => {
+  const progressions = [];
+  for (let i = number; progressions.length < 10; i += sequences) {
+    progressions.push(i);
   }
   return progressions;
 };
 
 const getRoundGame = () => {
-  const progressions = getProgression();
-  const indexRandomProgressions = Math.floor(Math.random() * progressions.length);
-  const correctAnswer = progressions[indexRandomProgressions].toString();
-
-  progressions[indexRandomProgressions] = '..';
-  const question = progressions.join(' ');
+  const startNumber = getRandomNum(maxNumber, minNumber);
+  const sequences = getRandomNum(maxNumber, minNumber);
+  const progression = getProgression(startNumber, sequences);
+  const hiddenIndexProgressions = getRandomIndex(progression);
+  const correctAnswer = progression[hiddenIndexProgressions].toString();
+  progression[hiddenIndexProgressions] = '..';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
