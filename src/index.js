@@ -6,7 +6,7 @@ const countRoundGame = 3;
 const executeLogicGame = (runRule, runRoundGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}`);
+  console.log(`Hello, ${name}!`);
   console.log(runRule);
 
   for (let i = 0; i < countRoundGame; i += 1) {
@@ -21,6 +21,6 @@ const executeLogicGame = (runRule, runRoundGame) => {
       return;
     }
   }
-  console.log(`Congratulations, ${name}`);
+  console.log(`Congratulations, ${name}!`);
 };
 export default executeLogicGame;
