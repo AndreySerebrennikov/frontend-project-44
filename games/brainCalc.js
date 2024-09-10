@@ -29,7 +29,7 @@ const runRoundGame = () => {
   const number1 = getRandomNumber(1, 100);
   const number2 = getRandomNumber(1, 10);
   const operator = runOperator();
-  const question = `${number1} ${operator} ${number2}`;
+  const question = `Question: ${number1} ${operator} ${number2}`;
   const correctAnswer = getCorrectAnswer(number1, number2, operator);
   return [question, correctAnswer];
 };
