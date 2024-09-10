@@ -11,7 +11,7 @@ const chekingPrimeNumber = (number) => {
 
 const isPrime = (number) => chekingPrimeNumber(number);
 
-const ruleGame = 'Answer "yes" if given number is prime. Otherwise answer "no."';
+const ruleGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const runRoundGame = () => {
   const number = getRandomNumber(1, 200);
   const question = `Question: ${number}`;
