@@ -1,7 +1,5 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
 const countRoundGame = 3;
 const executeLogicGame = (runRule, runRoundGame) => {
   console.log('Welcome to the Brain Games!');
