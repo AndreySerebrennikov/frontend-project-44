@@ -1,4 +1,5 @@
-import executeLogicGame, { getRandomNumber } from '../src/index.js';
+import executeLogicGame from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 const runOperator = () => {
   const operators = ['+', '-', '*'];
@@ -19,7 +20,7 @@ const getCorrectAnswer = (number1, number2, operator) => {
       result = number1 * number2;
       break;
     default:
-      result = 'erorr';
+      throw new Error(`Unknown operator: ${operator}`);
   }
   return result;
 };
