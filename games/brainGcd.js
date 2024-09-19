@@ -1,4 +1,5 @@
-import executeLogicGame, { getRandomNumber } from '../src/index.js';
+import executeLogicGame from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 const ruleGame = 'Find the greatest common divisor of given numbers.';
 

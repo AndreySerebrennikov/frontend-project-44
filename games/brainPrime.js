@@ -1,4 +1,5 @@
-import executeLogicGame, { getRandomNumber } from '../src/index.js';
+import executeLogicGame from '../src/index.js';
+import getRandomNumber from '../src/utils.js';
 
 const chekingPrimeNumber = (number) => {
   for (let i = 2; i < number / 2; i += 1) {
