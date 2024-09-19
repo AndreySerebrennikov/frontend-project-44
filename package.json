@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/AndreySerebrennikov/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/AndreySerebrennikov/frontend-project-44/actions)",
+  "description": "The Mind Games project is a set of five console games built on the principles of popular mobile applications for brain training",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -15,7 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrey Serebrennikov",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"
